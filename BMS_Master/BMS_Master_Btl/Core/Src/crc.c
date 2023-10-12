@@ -1,0 +1,105 @@
+/* USER CODE BEGIN Header */
+/**
+  ******************************************************************************
+  * @file    crc.c
+  * @brief   This file provides code for the configuration
+  *          of the CRC instances.
+  ******************************************************************************
+  * @attention
+  *
+  * Copyright (c) 2023 STMicroelectronics.
+  * All rights reserved.
+  *
+  * This software is licensed under terms that can be found in the LICENSE file
+  * in the root directory of this software component.
+  * If no LICENSE file comes with this software, it is provided AS-IS.
+  *
+  ******************************************************************************
+  */
+/* USER CODE END Header */
+/* Includes ------------------------------------------------------------------*/
+#include "crc.h"
+
+/* USER CODE BEGIN 0 */
+
+/* USER CODE END 0 */
+
+CRC_HandleTypeDef hcrc;
+
+/* CRC init function */
+void MX_CRC_Init(void)
+{
+
+  /* USER CODE BEGIN CRC_Init 0 */
+
+  /* USER CODE END CRC_Init 0 */
+
+  /* USER CODE BEGIN CRC_Init 1 */
+
+  /* USER CODE END CRC_Init 1 */
+  hcrc.Instance = CRC;
+  hcrc.Init.DefaultPolynomialUse = DEFAULT_POLYNOMIAL_ENABLE;
+  hcrc.Init.DefaultInitValueUse = DEFAULT_INIT_VALUE_ENABLE;
+  hcrc.Init.InputDataInversionMode = CRC_INPUTDATA_INVERSION_BYTE;
+  hcrc.Init.OutputDataInversionMode = CRC_OUTPUTDATA_INVERSION_ENABLE;
+  hcrc.InputDataFormat = CRC_INPUTDATA_FORMAT_BYTES;
+  if (HAL_CRC_Init(&hcrc) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN CRC_Init 2 */
+
+  /* USER CODE END CRC_Init 2 */
+
+}
+
+void HAL_CRC_MspInit(CRC_HandleTypeDef* crcHandle)
+{
+
+  if(crcHandle->Instance==CRC)
+  {
+  /* USER CODE BEGIN CRC_MspInit 0 */
+
+  /* USER CODE END CRC_MspInit 0 */
+    /* CRC clock enable */
+    __HAL_RCC_CRC_CLK_ENABLE();
+  /* USER CODE BEGIN CRC_MspInit 1 */
+
+  /* USER CODE END CRC_MspInit 1 */
+  }
+}
+
+void HAL_CRC_MspDeInit(CRC_HandleTypeDef* crcHandle)
+{
+
+  if(crcHandle->Instance==CRC)
+  {
+  /* USER CODE BEGIN CRC_MspDeInit 0 */
+
+  /* USER CODE END CRC_MspDeInit 0 */
+    /* Peripheral clock disable */
+    __HAL_RCC_CRC_CLK_DISABLE();
+  /* USER CODE BEGIN CRC_MspDeInit 1 */
+
+  /* USER CODE END CRC_MspDeInit 1 */
+  }
+}
+
+/* USER CODE BEGIN 1 */
+
+void crc_init(void)
+{
+  /* CRC clock enable */
+  __HAL_RCC_CRC_CLK_ENABLE();
+  /* initialize peripheral with default generating polynomial */
+  WRITE_REG(hcrc.Instance->POL, DEFAULT_CRC32_POLY);
+  MODIFY_REG(hcrc.Instance->CR, CRC_CR_POLYSIZE, CRC_POLYLENGTH_32B);
+  WRITE_REG(hcrc.Instance->INIT, DEFAULT_CRC_INITVALUE);
+  /* set input data inversion mode */
+  MODIFY_REG(hcrc.Instance->CR, CRC_CR_REV_IN, CRC_INPUTDATA_INVERSION_BYTE);
+  /* set output data inversion mode */
+  MODIFY_REG(hcrc.Instance->CR, CRC_CR_REV_OUT, CRC_OUTPUTDATA_INVERSION_ENABLE);
+  hcrc.InputDataFormat = CRC_INPUTDATA_FORMAT_BYTES;
+}
+
+/* USER CODE END 1 */
