@@ -14,7 +14,7 @@
     <VCProjectVersion>16.0</VCProjectVersion>
     <ProjectGuid>{B2AE7019-EE08-4D4F-B984-A42DE60181E6}</ProjectGuid>
     <BSP_ID>com.sysprogs.arm.stm32</BSP_ID>
-    <BSP_VERSION>2023.07</BSP_VERSION>
+    <BSP_VERSION>2024.01</BSP_VERSION>
     <InPlaceBSPSubdir />
     <RelativeBSPPath />
   </PropertyGroup>
@@ -32,13 +32,13 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|VisualGDB'">
     <GNUConfigurationType>Debug</GNUConfigurationType>
     <ToolchainID>com.visualgdb.arm-eabi</ToolchainID>
-    <ToolchainVersion>12.3.1/13.2/r1</ToolchainVersion>
+    <ToolchainVersion>13.3.1/15.1/r3</ToolchainVersion>
     <MCUPropertyListFile>$(ProjectDir)stm32.props</MCUPropertyListFile>
     <OutDir>$(SolutionDir)$(Platform)\$(MSBuildProjectName)\$(Configuration)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|VisualGDB'">
     <ToolchainID>com.visualgdb.arm-eabi</ToolchainID>
-    <ToolchainVersion>12.3.1/13.2/r1</ToolchainVersion>
+    <ToolchainVersion>13.3.1/15.1/r3</ToolchainVersion>
     <MCUPropertyListFile>$(ProjectDir)stm32.props</MCUPropertyListFile>
     <OutDir>$(SolutionDir)$(Platform)\$(MSBuildProjectName)\$(Configuration)\</OutDir>
   </PropertyGroup>
@@ -54,7 +54,7 @@
       <LibrarySearchDirectories>%(Link.LibrarySearchDirectories)</LibrarySearchDirectories>
       <AdditionalLibraryNames>%(Link.AdditionalLibraryNames)</AdditionalLibraryNames>
       <AdditionalLinkerInputs>%(Link.AdditionalLinkerInputs)</AdditionalLinkerInputs>
-      <LinkerScript>C:\Users\acinar\Documents\GitHub\PR0-005-008_BMS_MASTER_FIRST_FLASH_FOR_MEMORY\BMS_Master\BMS_Master_Btl\STM32G474RETX_FLASH.ld</LinkerScript>
+      <LinkerScript>C:\Users\itixier\Documents\GitHub\PR0-005-008_BMS_MASTER_FIRST_FLASH_FOR_MEMORY\BMS_Master\BMS_Master_Btl\STM32G474RETX_FLASH.ld</LinkerScript>
       <AdditionalOptions />
       <GenerateMapFile>true</GenerateMapFile>
       <PrintMemoryUsage>true</PrintMemoryUsage>
@@ -72,7 +72,7 @@
       <LibrarySearchDirectories>%(Link.LibrarySearchDirectories)</LibrarySearchDirectories>
       <AdditionalLibraryNames>%(Link.AdditionalLibraryNames)</AdditionalLibraryNames>
       <AdditionalLinkerInputs>%(Link.AdditionalLinkerInputs)</AdditionalLinkerInputs>
-      <LinkerScript>C:\Users\Julien\Documents\Code_source\CirculaCar\BMS_Master\BMS_Master_Btl\STM32G474RETX_FLASH.ld</LinkerScript>
+      <LinkerScript>C:\Users\itixier\Documents\GitHub\PR0-005-008_BMS_MASTER_FIRST_FLASH_FOR_MEMORY\BMS_Master\BMS_Master_Btl\STM32G474RETX_FLASH.ld</LinkerScript>
       <AdditionalOptions />
       <GenerateMapFile>true</GenerateMapFile>
       <PrintMemoryUsage>true</PrintMemoryUsage>

@@ -199,7 +199,8 @@ void init_BMS()
 	int firstIndex = 0;
 	int secondIndex = 0;
 	
-	WriteAllFlash(34, 15, 15, 1, 1, 1000, 50);
+	WriteAllFlash(0, 0, 0, 0, 0, 0, 2500);
+	//WriteAllFlash(cptCharge, AverageConsumption, AverageGenerative, cptTimeCharging,cptTimeDriving, cptChargeWh, BMS_SOC_percentage);
 	//ReadAllFlash(&cptCharge, &AverageConsumption, &AverageGenerative, &cptTimeCharging, &cptTimeDriving, &cptChargeWh, &BMS_SOC_percentage, &BMS_SOC);
 
 	

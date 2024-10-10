@@ -2,12 +2,12 @@
 <EmbeddedProfile xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ToolchainID>com.visualgdb.arm-eabi</ToolchainID>
   <ToolchainVersion>
-    <GCC>12.3.1</GCC>
-    <GDB>13.2</GDB>
-    <Revision>1</Revision>
+    <GCC>13.3.1</GCC>
+    <GDB>15.1</GDB>
+    <Revision>3</Revision>
   </ToolchainVersion>
   <BspID>com.sysprogs.arm.stm32</BspID>
-  <BspVersion>2023.07</BspVersion>
+  <BspVersion>2024.01</BspVersion>
   <McuID>STM32G474RE</McuID>
   <MCUDefinitionFile>STM32G4xxxx/DeviceDefinitions/stm32g474xx.xml</MCUDefinitionFile>
   <MCUProperties>
@@ -49,7 +49,7 @@
     <AllDependencies>
       <ProjectDependency>
         <RelativePath>.cproject</RelativePath>
-        <Timestamp>133397804035238357</Timestamp>
+        <Timestamp>133730214581531201</Timestamp>
       </ProjectDependency>
     </AllDependencies>
     <RootDirectory>
@@ -64,10 +64,25 @@
                   <RelativePath>Core\Inc\adc.h</RelativePath>
                 </VirtualFileSnapshot>
                 <VirtualFileSnapshot>
+                  <RelativePath>Core\Inc\Can_BMS.h</RelativePath>
+                </VirtualFileSnapshot>
+                <VirtualFileSnapshot>
+                  <RelativePath>Core\Inc\CAN_Retrofit.h</RelativePath>
+                </VirtualFileSnapshot>
+                <VirtualFileSnapshot>
+                  <RelativePath>Core\Inc\charger.h</RelativePath>
+                </VirtualFileSnapshot>
+                <VirtualFileSnapshot>
+                  <RelativePath>Core\Inc\Consumption.h</RelativePath>
+                </VirtualFileSnapshot>
+                <VirtualFileSnapshot>
                   <RelativePath>Core\Inc\crc.h</RelativePath>
                 </VirtualFileSnapshot>
                 <VirtualFileSnapshot>
                   <RelativePath>Core\Inc\dma.h</RelativePath>
+                </VirtualFileSnapshot>
+                <VirtualFileSnapshot>
+                  <RelativePath>Core\Inc\ErrorManagement.h</RelativePath>
                 </VirtualFileSnapshot>
                 <VirtualFileSnapshot>
                   <RelativePath>Core\Inc\fdcan.h</RelativePath>
@@ -82,40 +97,10 @@
                   <RelativePath>Core\Inc\main.h</RelativePath>
                 </VirtualFileSnapshot>
                 <VirtualFileSnapshot>
-                  <RelativePath>Core\Inc\spi.h</RelativePath>
+                  <RelativePath>Core\Inc\relay.h</RelativePath>
                 </VirtualFileSnapshot>
                 <VirtualFileSnapshot>
-                  <RelativePath>Core\Inc\stm32g4xx_hal_conf.h</RelativePath>
-                </VirtualFileSnapshot>
-                <VirtualFileSnapshot>
-                  <RelativePath>Core\Inc\stm32g4xx_it.h</RelativePath>
-                </VirtualFileSnapshot>
-                <VirtualFileSnapshot>
-                  <RelativePath>Core\Inc\tim.h</RelativePath>
-                </VirtualFileSnapshot>
-                <VirtualFileSnapshot>
-                  <RelativePath>Core\Inc\usart.h</RelativePath>
-                </VirtualFileSnapshot>
-                <VirtualFileSnapshot>
-                  <RelativePath>Core\Inc\adc.h</RelativePath>
-                </VirtualFileSnapshot>
-                <VirtualFileSnapshot>
-                  <RelativePath>Core\Inc\crc.h</RelativePath>
-                </VirtualFileSnapshot>
-                <VirtualFileSnapshot>
-                  <RelativePath>Core\Inc\dma.h</RelativePath>
-                </VirtualFileSnapshot>
-                <VirtualFileSnapshot>
-                  <RelativePath>Core\Inc\fdcan.h</RelativePath>
-                </VirtualFileSnapshot>
-                <VirtualFileSnapshot>
-                  <RelativePath>Core\Inc\gpio.h</RelativePath>
-                </VirtualFileSnapshot>
-                <VirtualFileSnapshot>
-                  <RelativePath>Core\Inc\iwdg.h</RelativePath>
-                </VirtualFileSnapshot>
-                <VirtualFileSnapshot>
-                  <RelativePath>Core\Inc\main.h</RelativePath>
+                  <RelativePath>Core\Inc\SOC_Computation.h</RelativePath>
                 </VirtualFileSnapshot>
                 <VirtualFileSnapshot>
                   <RelativePath>Core\Inc\spi.h</RelativePath>
@@ -141,10 +126,25 @@
                   <RelativePath>Core\Src\adc.c</RelativePath>
                 </VirtualFileSnapshot>
                 <VirtualFileSnapshot>
+                  <RelativePath>Core\Src\Can_BMS.c</RelativePath>
+                </VirtualFileSnapshot>
+                <VirtualFileSnapshot>
+                  <RelativePath>Core\Src\CAN_Retrofit.c</RelativePath>
+                </VirtualFileSnapshot>
+                <VirtualFileSnapshot>
+                  <RelativePath>Core\Src\charger.c</RelativePath>
+                </VirtualFileSnapshot>
+                <VirtualFileSnapshot>
+                  <RelativePath>Core\Src\Consumption.c</RelativePath>
+                </VirtualFileSnapshot>
+                <VirtualFileSnapshot>
                   <RelativePath>Core\Src\crc.c</RelativePath>
                 </VirtualFileSnapshot>
                 <VirtualFileSnapshot>
                   <RelativePath>Core\Src\dma.c</RelativePath>
+                </VirtualFileSnapshot>
+                <VirtualFileSnapshot>
+                  <RelativePath>Core\Src\ErrorManagement.c</RelativePath>
                 </VirtualFileSnapshot>
                 <VirtualFileSnapshot>
                   <RelativePath>Core\Src\fdcan.c</RelativePath>
@@ -157,6 +157,12 @@
                 </VirtualFileSnapshot>
                 <VirtualFileSnapshot>
                   <RelativePath>Core\Src\main.c</RelativePath>
+                </VirtualFileSnapshot>
+                <VirtualFileSnapshot>
+                  <RelativePath>Core\Src\relay.c</RelativePath>
+                </VirtualFileSnapshot>
+                <VirtualFileSnapshot>
+                  <RelativePath>Core\Src\SOC_Computation.c</RelativePath>
                 </VirtualFileSnapshot>
                 <VirtualFileSnapshot>
                   <RelativePath>Core\Src\spi.c</RelativePath>
@@ -325,142 +331,10 @@
                         <VirtualFileSnapshot>
                           <RelativePath>Drivers\STM32G4xx_HAL_Driver\Inc\Legacy\stm32_hal_legacy.h</RelativePath>
                         </VirtualFileSnapshot>
-                        <VirtualFileSnapshot>
-                          <RelativePath>Drivers\STM32G4xx_HAL_Driver\Inc\Legacy\stm32_hal_legacy.h</RelativePath>
-                        </VirtualFileSnapshot>
                       </Files>
                     </VirtualDirectorySnapshot>
                   </Subdirectories>
                   <Files>
-                    <VirtualFileSnapshot>
-                      <RelativePath>Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal.h</RelativePath>
-                    </VirtualFileSnapshot>
-                    <VirtualFileSnapshot>
-                      <RelativePath>Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_adc.h</RelativePath>
-                    </VirtualFileSnapshot>
-                    <VirtualFileSnapshot>
-                      <RelativePath>Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_adc_ex.h</RelativePath>
-                    </VirtualFileSnapshot>
-                    <VirtualFileSnapshot>
-                      <RelativePath>Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_cortex.h</RelativePath>
-                    </VirtualFileSnapshot>
-                    <VirtualFileSnapshot>
-                      <RelativePath>Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_crc.h</RelativePath>
-                    </VirtualFileSnapshot>
-                    <VirtualFileSnapshot>
-                      <RelativePath>Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_crc_ex.h</RelativePath>
-                    </VirtualFileSnapshot>
-                    <VirtualFileSnapshot>
-                      <RelativePath>Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_def.h</RelativePath>
-                    </VirtualFileSnapshot>
-                    <VirtualFileSnapshot>
-                      <RelativePath>Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_dma.h</RelativePath>
-                    </VirtualFileSnapshot>
-                    <VirtualFileSnapshot>
-                      <RelativePath>Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_dma_ex.h</RelativePath>
-                    </VirtualFileSnapshot>
-                    <VirtualFileSnapshot>
-                      <RelativePath>Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_exti.h</RelativePath>
-                    </VirtualFileSnapshot>
-                    <VirtualFileSnapshot>
-                      <RelativePath>Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_fdcan.h</RelativePath>
-                    </VirtualFileSnapshot>
-                    <VirtualFileSnapshot>
-                      <RelativePath>Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_flash.h</RelativePath>
-                    </VirtualFileSnapshot>
-                    <VirtualFileSnapshot>
-                      <RelativePath>Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_flash_ex.h</RelativePath>
-                    </VirtualFileSnapshot>
-                    <VirtualFileSnapshot>
-                      <RelativePath>Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_flash_ramfunc.h</RelativePath>
-                    </VirtualFileSnapshot>
-                    <VirtualFileSnapshot>
-                      <RelativePath>Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_gpio.h</RelativePath>
-                    </VirtualFileSnapshot>
-                    <VirtualFileSnapshot>
-                      <RelativePath>Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_gpio_ex.h</RelativePath>
-                    </VirtualFileSnapshot>
-                    <VirtualFileSnapshot>
-                      <RelativePath>Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_iwdg.h</RelativePath>
-                    </VirtualFileSnapshot>
-                    <VirtualFileSnapshot>
-                      <RelativePath>Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_pwr.h</RelativePath>
-                    </VirtualFileSnapshot>
-                    <VirtualFileSnapshot>
-                      <RelativePath>Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_pwr_ex.h</RelativePath>
-                    </VirtualFileSnapshot>
-                    <VirtualFileSnapshot>
-                      <RelativePath>Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_rcc.h</RelativePath>
-                    </VirtualFileSnapshot>
-                    <VirtualFileSnapshot>
-                      <RelativePath>Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_rcc_ex.h</RelativePath>
-                    </VirtualFileSnapshot>
-                    <VirtualFileSnapshot>
-                      <RelativePath>Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_spi.h</RelativePath>
-                    </VirtualFileSnapshot>
-                    <VirtualFileSnapshot>
-                      <RelativePath>Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_spi_ex.h</RelativePath>
-                    </VirtualFileSnapshot>
-                    <VirtualFileSnapshot>
-                      <RelativePath>Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_tim.h</RelativePath>
-                    </VirtualFileSnapshot>
-                    <VirtualFileSnapshot>
-                      <RelativePath>Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_tim_ex.h</RelativePath>
-                    </VirtualFileSnapshot>
-                    <VirtualFileSnapshot>
-                      <RelativePath>Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_uart.h</RelativePath>
-                    </VirtualFileSnapshot>
-                    <VirtualFileSnapshot>
-                      <RelativePath>Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_uart_ex.h</RelativePath>
-                    </VirtualFileSnapshot>
-                    <VirtualFileSnapshot>
-                      <RelativePath>Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_adc.h</RelativePath>
-                    </VirtualFileSnapshot>
-                    <VirtualFileSnapshot>
-                      <RelativePath>Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_bus.h</RelativePath>
-                    </VirtualFileSnapshot>
-                    <VirtualFileSnapshot>
-                      <RelativePath>Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_cortex.h</RelativePath>
-                    </VirtualFileSnapshot>
-                    <VirtualFileSnapshot>
-                      <RelativePath>Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_crc.h</RelativePath>
-                    </VirtualFileSnapshot>
-                    <VirtualFileSnapshot>
-                      <RelativePath>Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_crs.h</RelativePath>
-                    </VirtualFileSnapshot>
-                    <VirtualFileSnapshot>
-                      <RelativePath>Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_dma.h</RelativePath>
-                    </VirtualFileSnapshot>
-                    <VirtualFileSnapshot>
-                      <RelativePath>Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_dmamux.h</RelativePath>
-                    </VirtualFileSnapshot>
-                    <VirtualFileSnapshot>
-                      <RelativePath>Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_exti.h</RelativePath>
-                    </VirtualFileSnapshot>
-                    <VirtualFileSnapshot>
-                      <RelativePath>Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_gpio.h</RelativePath>
-                    </VirtualFileSnapshot>
-                    <VirtualFileSnapshot>
-                      <RelativePath>Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_lpuart.h</RelativePath>
-                    </VirtualFileSnapshot>
-                    <VirtualFileSnapshot>
-                      <RelativePath>Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_pwr.h</RelativePath>
-                    </VirtualFileSnapshot>
-                    <VirtualFileSnapshot>
-                      <RelativePath>Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_rcc.h</RelativePath>
-                    </VirtualFileSnapshot>
-                    <VirtualFileSnapshot>
-                      <RelativePath>Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_system.h</RelativePath>
-                    </VirtualFileSnapshot>
-                    <VirtualFileSnapshot>
-                      <RelativePath>Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_tim.h</RelativePath>
-                    </VirtualFileSnapshot>
-                    <VirtualFileSnapshot>
-                      <RelativePath>Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_usart.h</RelativePath>
-                    </VirtualFileSnapshot>
-                    <VirtualFileSnapshot>
-                      <RelativePath>Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_utils.h</RelativePath>
-                    </VirtualFileSnapshot>
                     <VirtualFileSnapshot>
                       <RelativePath>Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal.h</RelativePath>
                     </VirtualFileSnapshot>
@@ -700,7 +574,7 @@
             <string>STM32G474xx</string>
           </PreprocessorMacros>
           <GeneratePreprocessorOutput>false</GeneratePreprocessorOutput>
-          <LinkerScript>C:\Users\acinar\Documents\Soft BMS_MASTER_STM_32\Soft\BMS_Master\BMS_Master_App\STM32G474RETX_FLASH.ld</LinkerScript>
+          <LinkerScript>C:\Users\itixier\Documents\GitHub\PR0-005-008_BMS_MASTER_FIRST_FLASH_FOR_MEMORY\BMS_Master\BMS_Master_App\STM32G474RETX_FLASH.ld</LinkerScript>
           <IsDebugConfiguration>false</IsDebugConfiguration>
         </Settings>
       </ImportedConfiguration>

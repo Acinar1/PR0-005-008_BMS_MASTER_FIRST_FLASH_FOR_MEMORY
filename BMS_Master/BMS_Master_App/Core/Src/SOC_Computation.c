@@ -575,7 +575,7 @@ void writeSOCFlash(uint16_t BMS_SOC_percentage)
 
 void WriteAllFlash(int cptCharge, int AverageConsumption, int AverageGenerative ,int cptTimeCharging, int cptTimeDriving, int cptChargeWh, uint16_t BMS_SOC_percentage)
 {
-	uint8_t data_to_write[] = { cptCharge / 256, cptCharge % 256, AverageGenerative / 256, AverageGenerative % 256, AverageConsumption / 256, AverageConsumption % 256, cptTimeDriving / 256, cptTimeDriving % 256, cptTimeCharging / 256, cptTimeCharging % 256, cptChargeWh / 16777216, cptChargeWh / 65536, cptChargeWh / 256, cptChargeWh % 256, BMS_SOC_percentage / 16, BMS_SOC_percentage % 16 };
+	uint8_t data_to_write[] = { cptCharge / 256, cptCharge % 256, AverageGenerative / 256, AverageGenerative % 256, AverageConsumption / 256, AverageConsumption % 256, cptTimeDriving / 256, cptTimeDriving % 256, cptTimeCharging / 256, cptTimeCharging % 256, cptChargeWh / 16777216, cptChargeWh / 65536, cptChargeWh / 256, cptChargeWh % 256, BMS_SOC_percentage / 256, BMS_SOC_percentage % 256 };
 	uint32_t address_to_write = 0x000000; // Adresse de départ dans la mémoire flash
 	uint32_t data_length = sizeof(data_to_write); // Longueur des données à écrire
 	
